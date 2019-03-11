@@ -1,0 +1,16 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config-service-demo
+  cloud:
+    config:
+      allow-override: true
+      override-none: true
+      override-system-properties: true
+      server:
+        git:
+          uri: https://github.com/lvning300/config-repo.git
+          username:
+          password:
+          basedir: target/config
