@@ -14,3 +14,11 @@ spring:
           username:
           password:
           basedir: target/config
+eureka:
+  instance:
+    hostname: ${eureka.client.instance.hostname} #hostname: localhost
+    instance-id: ${eureka.client.instance.hostname}:${server.port}
+    prefer-ip-address: true # 开启以Ip+端口多方式显示Eureka界面
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.host}:${eureka.instance.port}/eureka/
