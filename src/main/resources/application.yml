@@ -16,7 +16,7 @@ spring:
           basedir: target/config
 eureka:
   instance:
-    hostname: ${eureka.client.instance.hostname} #hostname: localhost
+    hostname: 192.168.1.115 #hostname: localhost
     #instance-id: ${eureka.client.instance.hostname}:${server.port}
     prefer-ip-address: true # 开启以Ip+端口多方式显示Eureka界面
   client:
