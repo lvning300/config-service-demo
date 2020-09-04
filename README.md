@@ -43,6 +43,11 @@ spring-boot:run
 -f pom.xml
 ```
 
+## 访问其他服务的配置文件
+```
+http://localhost:8888/user-service/dev【服务名+环境名】
+在配置服务端的加密密码回自动解密显示，客户端加密方式显示
+```
   
 
 

@@ -5,9 +5,6 @@ spring:
     name: config-service-demo
   cloud:
     config:
-      allow-override: true
-      override-none: true
-      override-system-properties: true
       server:
         git:
           uri: https://github.com/lvning300/config-repo.git
@@ -16,7 +13,7 @@ spring:
           basedir: target/config
 eureka:
   instance:
-    hostname: 192.168.1.115 #hostname: localhost
+    hostname: 127.0.0.1 #hostname: localhost
     #instance-id: ${eureka.client.instance.hostname}:${server.port}
     prefer-ip-address: true # 开启以Ip+端口多方式显示Eureka界面
   client:
