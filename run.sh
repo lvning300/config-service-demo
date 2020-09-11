@@ -1,5 +1,5 @@
 #!/bin/sh
 echo "********************************************************"
-echo "Starting Configuration Server"
+echo "Starting the Eureka Server"
 echo "********************************************************"
-java -jar /usr/local/configserver/config-service-demo-1.0.0.jar
+java  $JAVA_OPTS -Dspring.profiles.active=$profile  -jar /usr/local/config-service-demo-1.0.jar

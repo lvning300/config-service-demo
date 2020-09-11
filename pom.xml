@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>config-service-demo</artifactId>
-    <version>1.0.0</version>
+    <version>1.0</version>
     <name>configServiceDemo</name>
     <description>配置中心</description>
 
@@ -73,7 +73,7 @@
             <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
-                <version>0.4.10</version>
+                <version>1.2.1</version>
                 <configuration>
                     <imageName>${docker.image.name}:${docker.image.tag}</imageName>
                     <dockerDirectory>${basedir}/target/dockerfile</dockerDirectory>

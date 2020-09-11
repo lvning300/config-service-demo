@@ -1,7 +1,7 @@
 FROM openjdk:8-jdk-alpine
 RUN  apk update && apk upgrade && apk add netcat-openbsd
 COPY run.sh /usr/bin
-COPY target/config-service-demo-1.0.0.jar /usr/local
+COPY target/config-service-demo-1.0.jar /usr/local
 RUN chmod a+x /usr/bin/run.sh \
     && echo "http://mirrors.aliyun.com/alpine/v3.8/main/" > /etc/apk/repositories \
     && echo "https://mirrors.aliyun.com/alpine/v3.8/community/" >> /etc/apk/repositories \

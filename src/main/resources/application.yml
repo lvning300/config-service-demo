@@ -18,4 +18,4 @@ eureka:
     prefer-ip-address: true # 开启以Ip+端口多方式显示Eureka界面
   client:
     serviceUrl:
-      defaultZone: http://peer1:9009/eureka/,http://peer2:9010/eureka/
+      defaultZone: http://192.168.2.221:9009/eureka/,http://192.168.2.221:9010/eureka/

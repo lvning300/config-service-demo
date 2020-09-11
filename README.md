@@ -48,7 +48,25 @@ spring-boot:run
 http://localhost:8888/user-service/dev【服务名+环境名】
 在配置服务端的加密密码回自动解密显示，客户端加密方式显示
 ```
-  
+
+```
+客户端刷新配置,只能刷新用户自定义配置,像数据等框架自带的不能刷新
+http://localhost:5555/actuator/refresh
+Application主类中添加
+@RefreshScope刷新
+```
 
 
 
+
+### docker 打包启动命令
+```
+打包
+docker build -t scp-eureka-server:1.0 .
+ 运行
+docker run -it --rm -p 8888:8888  --name config-service-demo --env profile=local  config-service-demo:1.0
+docker run -it --rm -p 9010:9010  --name scp-eureka-server2 --env profile=peer2 scp-eureka-server:1.0
+docker run -it --rm -p 9010:9010 --name scp-eureka-server2 --env profile=peer2  scp-eureka-server:1.0
+
+
+```
